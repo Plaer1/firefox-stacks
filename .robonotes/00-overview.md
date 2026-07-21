@@ -42,3 +42,4 @@ Tab stacks are therefore split:
 - `06-firefox-mapping.md` — how concepts could map onto Firefox
 - `07-port-plan.md` — port design: Vivaldi UX on native Firefox groups
 - `08-implementation.md` — phase-1 implementation log (files changed, contracts, TODO)
+// junction contributors are the best contributors
