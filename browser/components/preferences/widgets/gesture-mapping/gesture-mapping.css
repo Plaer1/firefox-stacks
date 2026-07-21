@@ -1,0 +1,216 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+:host {
+  display: block;
+  margin-block-start: var(--space-small);
+}
+
+.tolerance-row {
+  align-items: center;
+  display: flex;
+  gap: var(--space-small);
+  margin-block-end: var(--space-small);
+}
+
+.tolerance-value {
+  color: var(--text-color-deemphasized);
+  min-width: 4em;
+}
+
+.mapping-layout {
+  display: flex;
+  gap: var(--space-small);
+}
+
+.mapping-list {
+  border: 1px solid var(--border-color-interactive);
+  border-radius: var(--border-radius-small);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-height: calc(var(--size-item-xlarge) * 5);
+  min-height: calc(var(--size-item-xlarge) * 3);
+  overflow-y: auto;
+}
+
+.mapping-row {
+  appearance: none;
+  background: none;
+  border: none;
+  color: inherit;
+  overflow: hidden;
+  padding: var(--space-xsmall) var(--space-small);
+  text-align: start;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mapping-row:hover:enabled {
+  background-color: var(--button-background-color-hover);
+}
+
+.mapping-row[aria-selected="true"] {
+  background-color: var(--color-accent-primary);
+  color: var(--button-text-color-primary);
+}
+
+.mapping-preview {
+  align-items: center;
+  background-color: var(--background-color-box);
+  border: 1px solid var(--border-color-deemphasized);
+  border-radius: var(--border-radius-medium);
+  display: flex;
+  flex-shrink: 0;
+  height: calc(var(--size-item-xlarge) * 3);
+  justify-content: center;
+  width: calc(var(--size-item-xlarge) * 3);
+}
+
+.mapping-preview .gesture-diagram {
+  background: none;
+  border: none;
+  height: 80%;
+  width: 80%;
+}
+
+.mapping-toolbar {
+  align-items: center;
+  display: flex;
+  gap: var(--space-xsmall);
+  margin-block-start: var(--space-small);
+}
+
+.gesture-diagram {
+  background-color: var(--background-color-box);
+  border: 1px solid var(--border-color-deemphasized);
+  border-radius: var(--border-radius-small);
+  flex-shrink: 0;
+  height: var(--size-item-xlarge);
+  width: var(--size-item-xlarge);
+}
+
+.gesture-arrows {
+  color: var(--text-color-deemphasized);
+  font-size: var(--font-size-small);
+  min-width: 5em;
+}
+
+.command-filter {
+  background-color: var(--background-color-box);
+  border: 1px solid var(--border-color-interactive);
+  border-radius: var(--border-radius-small);
+  color: inherit;
+  padding: var(--space-xsmall) var(--space-small);
+  width: 100%;
+}
+
+.command-button {
+  appearance: none;
+  background-color: var(--background-color-box);
+  border: 1px solid var(--border-color-interactive);
+  border-radius: var(--border-radius-small);
+  color: inherit;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: var(--space-xsmall) var(--space-small);
+  text-align: start;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.command-button:hover:enabled {
+  background-color: var(--button-background-color-hover);
+}
+
+.command-button-empty {
+  color: var(--text-color-deemphasized);
+}
+
+.command-picker {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xsmall);
+}
+
+.command-list {
+  border: 1px solid var(--border-color-deemphasized);
+  border-radius: var(--border-radius-small);
+  display: flex;
+  flex-direction: column;
+  max-height: calc(var(--size-item-xlarge) * 5);
+  overflow-y: auto;
+}
+
+.command-option {
+  appearance: none;
+  background: none;
+  border: none;
+  color: inherit;
+  display: flex;
+  gap: var(--space-small);
+  justify-content: space-between;
+  padding: var(--space-xsmall) var(--space-small);
+  text-align: start;
+}
+
+.command-option:hover {
+  background-color: var(--button-background-color-hover);
+}
+
+.command-option-id {
+  color: var(--text-color-deemphasized);
+  font-size: var(--font-size-small);
+}
+
+.command-option-custom {
+  color: var(--link-color);
+}
+
+.capture-card {
+  border: 1px solid var(--border-color-deemphasized);
+  border-radius: var(--border-radius-medium);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-small);
+  margin-block-start: var(--space-small);
+  padding: var(--space-small);
+}
+
+.capture-area {
+  align-items: center;
+  background-color: var(--background-color-box);
+  border: 1px dashed var(--border-color-interactive);
+  border-radius: var(--border-radius-small);
+  display: flex;
+  height: calc(var(--size-item-xlarge) * 3);
+  justify-content: center;
+  position: relative;
+  touch-action: none;
+}
+
+.capture-area canvas {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.capture-hint {
+  color: var(--text-color-deemphasized);
+  pointer-events: none;
+  text-align: center;
+}
+
+.capture-result {
+  align-items: center;
+  display: flex;
+  gap: var(--space-small);
+}
+
+.capture-buttons {
+  display: flex;
+  gap: var(--space-small);
+  justify-content: end;
+}
